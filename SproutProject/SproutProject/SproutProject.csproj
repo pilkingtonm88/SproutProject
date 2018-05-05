@@ -78,8 +78,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>sproutHome.feature</DependentUpon>
     </Compile>
+    <Compile Include="Page Objects\sproutHomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Step Definitions\SproutHomeSteps.cs" />
+    <Compile Include="Step Definitions\sproutHomeSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

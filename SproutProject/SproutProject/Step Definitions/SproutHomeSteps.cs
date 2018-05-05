@@ -7,38 +7,21 @@ using ClassLibrary1;
 namespace SproutProject
 {
     [Binding]
-    public class SproutHomeSteps
+    public class sproutHomeSteps
     {
-		ClassLibrary1.webDriver webDriver=null;
-
-		public webDriver WebDriver
-		{
-			get
-			{
-				return webDriver;
-			}
-			set
-			{
-				webDriver = value;
-			}
-		}
+		webDriver webDriver= new webDriver();
 
 		[Given(@"I have entered the Sprout URL domain")]
         public void GivenIHaveEnteredTheSproutURLDomain()
         {
-			WebDriver.url("https://sproutpeds.com");
+			webDriver.url("http://www.sproutpeds.com/#page");
 		}
-        
-        [Given(@"I have initiated the HTTP request")]
-        public void GivenIHaveInitiatedTheHTTPRequest()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
+                
         [When(@"the page loads")]
         public void WhenThePageLoads()
         {
-            ScenarioContext.Current.Pending();
+			webDriver.findElementByTitle();
+			
         }
         
         [Then(@"the Sprout Home page should load")]

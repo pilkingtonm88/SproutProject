@@ -9,19 +9,40 @@ using OpenQA.Selenium.Chrome;
 
 namespace ClassLibrary1
 {
-	public abstract class webDriver
+	public class webDriver
 	{
 		IWebDriver driver;
 
 		public void main(string[] args)
-			{
-			}
+		{
+
+		}
 
 		public void url(string url)
-			{
+		{
 			driver = new ChromeDriver();
 			driver.Url = url;
-			}
+		}
+
+		public void findElementByClass(String className)
+		{
+			driver.FindElement(By.ClassName(className));
+		}
+
+		public void findElementByID(String ID)
+		{
+			driver.FindElement(By.Id(ID));
+		}
+
+		public void findElementByTitle()
+		{
+			driver.FindElement(By.TagName("title"));
+		}
+
+		public void test()
+		{
+			driver.
+		}	
 
 		public void quit()
 			{
