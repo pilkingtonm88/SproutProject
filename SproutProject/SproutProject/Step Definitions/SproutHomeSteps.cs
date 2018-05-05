@@ -1,16 +1,33 @@
 ﻿using System;
 using TechTalk.SpecFlow;
+using OpenQA.Selenium;
+using ClassLibrary1;
+
 
 namespace SproutProject
 {
     [Binding]
     public class SproutHomeSteps
     {
-        [Given(@"I have entered the Sprout URL domain")]
+		ClassLibrary1.webDriver webDriver=null;
+
+		public webDriver WebDriver
+		{
+			get
+			{
+				return webDriver;
+			}
+			set
+			{
+				webDriver = value;
+			}
+		}
+
+		[Given(@"I have entered the Sprout URL domain")]
         public void GivenIHaveEnteredTheSproutURLDomain()
         {
-            
-        }
+			WebDriver.url("https://sproutpeds.com");
+		}
         
         [Given(@"I have initiated the HTTP request")]
         public void GivenIHaveInitiatedTheHTTPRequest()
