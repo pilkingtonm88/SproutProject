@@ -34,15 +34,10 @@ namespace ClassLibrary1
 			driver.FindElement(By.Id(ID));
 		}
 
-		public void findElementByTitle()
+		public void findElementByTagTitle()
 		{
 			driver.FindElement(By.TagName("title"));
 		}
-
-		public void test()
-		{
-			driver.
-		}	
 
 		public void quit()
 			{

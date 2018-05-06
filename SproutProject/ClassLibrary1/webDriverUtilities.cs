@@ -15,19 +15,4 @@ namespace ClassLibrary1
 
 	}
 
-	public class Assert
-	{
-		public bool isTrue(bool value)
-		{
-			if (value == true)
-			{
-				return true;
-
-			}
-			else if (value == false)
-			{
-				return false;
-			}
-		}
-	}
 }
